@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layout Flex + Grid</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #1f2937;
+      color: white;
+    }
+
+    .site-header nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .site-header nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .cards-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+    }
+
+    .card h2 {
+      margin: 0.5rem 1rem 0;
+    }
+
+    .card p {
+      margin: 0.5rem 1rem;
+      flex: 1;
+    }
+
+    .card button {
+      margin: 0 1rem 1rem;
+      align-self: flex-start;
+    }
+
+    .site-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #1f2937;
+      color: white;
+    }
+
+    .site-footer nav ul {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .site-footer a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">MiLogo</div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="cards-grid">
+    <article class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Card 1">
+      <h2>Título 1</h2>
+      <p>Texto corto de ejemplo.</p>
+      <button>Ver más</button>
+    </article>
+    <article class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Card 2">
+      <h2>Título 2</h2>
+      <p>Texto un poco más largo para probar que la altura se mantiene igual entre cards.</p>
+      <button>Ver más</button>
+    </article>
+    <article class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Card 3">
+      <h2>Título 3</h2>
+      <p>Texto corto.</p>
+      <button>Ver más</button>
+    </article>
+    <article class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Card 4">
+      <h2>Título 4</h2>
+      <p>Texto de ejemplo.</p>
+      <button>Ver más</button>
+    </article>
+    <article class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Card 5">
+      <h2>Título 5</h2>
+      <p>Texto de ejemplo más extenso para la card cinco.</p>
+      <button>Ver más</button>
+    </article>
+    <article class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Card 6">
+      <h2>Título 6</h2>
+      <p>Texto corto.</p>
+      <button>Ver más</button>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Mi Sitio</p>
+    <nav>
+      <ul>
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Términos</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
