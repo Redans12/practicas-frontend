@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reset personalizado</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      overflow-wrap: break-word;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Prueba del reset</h1>
+  <p>Texto de prueba sin márgenes por defecto.</p>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+  <a href="#">Enlace</a>
+
+  <!--
+    Comparación con Preflight:
+    Ya cubierto: márgenes en 0, box-sizing border-box, imágenes como block,
+    quitar estilos de listas, herencia de fuente en inputs y botones.
+    Falta a mano: scroll-behavior, text-wrap en encabezados,
+    estilos de foco visibles (Preflight quita el outline pero no pone uno accesible).
+
+    Preguntas:
+    1. Los navegadores traen estilos por defecto para que una página sin CSS siga siendo
+       legible. Molestan porque cada navegador los implementa distinto, rompiendo la
+       consistencia visual entre Chrome, Firefox, Safari, etc.
+    2. Preflight normaliza lo básico, pero cada proyecto necesita ajustes propios
+       (scroll suave, foco accesible, tipografía base) que Preflight no cubre. Saber
+       hacer un reset a mano permite entender y ajustar esos detalles finos.
+  -->
+</body>
+</html>
