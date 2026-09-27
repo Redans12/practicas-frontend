@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards responsive + dark mode</title>
+    <link rel="stylesheet" href="../output.css" />
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-900 p-6 font-sans transition-colors">
+    <div class="flex justify-end max-w-5xl mx-auto mb-4">
+      <button
+        id="toggle-dark"
+        class="rounded-md bg-primary text-white px-4 py-2 font-medium hover:bg-primary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+      >
+        Cambiar tema
+      </button>
+    </div>
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
+    >
+      <article
+        class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
+      >
+        <img
+          src="https://via.placeholder.com/400x250"
+          alt="Teclado mecánico inalámbrico"
+          class="w-full"
+        />
+        <div class="p-4">
+          <h2 class="text-lg font-bold text-gray-800 dark:text-gray-100">
+            Teclado mecánico
+          </h2>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">
+            Switches táctiles, retroiluminación RGB.
+          </p>
+          <p class="text-xl font-semibold text-gray-900 dark:text-white mt-3">
+            $45.00
+          </p>
+          <button
+            class="mt-4 w-full rounded-md bg-primary text-white py-2 font-medium hover:bg-primary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 active:scale-95 transition"
+          >
+            Comprar
+          </button>
+        </div>
+      </article>
+
+      <article
+        class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
+      >
+        <img
+          src="https://via.placeholder.com/400x250"
+          alt="Monitor 24 pulgadas"
+          class="w-full"
+        />
+        <div class="p-4">
+          <h2 class="text-lg font-bold text-gray-800 dark:text-gray-100">
+            Monitor 24"
+          </h2>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">
+            Panel IPS, 75Hz, HDMI y DisplayPort.
+          </p>
+          <p class="text-xl font-semibold text-gray-900 dark:text-white mt-3">
+            $220.00
+          </p>
+          <button
+            class="mt-4 w-full rounded-md bg-primary text-white py-2 font-medium hover:bg-primary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 active:scale-95 transition"
+          >
+            Comprar
+          </button>
+        </div>
+      </article>
+
+      <article
+        class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
+      >
+        <img
+          src="https://via.placeholder.com/400x250"
+          alt="Webcam HD"
+          class="w-full"
+        />
+        <div class="p-4">
+          <h2 class="text-lg font-bold text-gray-800 dark:text-gray-100">
+            Webcam HD
+          </h2>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">
+            Sin stock por el momento.
+          </p>
+          <p class="text-xl font-semibold text-gray-900 dark:text-white mt-3">
+            $60.00
+          </p>
+          <button
+            disabled
+            class="mt-4 w-full rounded-md bg-gray-300 text-gray-500 py-2 font-medium cursor-not-allowed disabled:opacity-60"
+          >
+            Sin stock
+          </button>
+        </div>
+      </article>
+    </div>
+
+    <script>
+      document.getElementById("toggle-dark").addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+      });
+    </script>
+  </body>
+</html>
